@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <title>QuickList</title>
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="#" aria-label="QuickList, início">
+            <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="brand-name">quicklist</span>
+        </a>
+    </header>
+
+    <main class="page-shell">
+        <a class="back-link" href="#">
+            <span aria-hidden="true">&#8592;</span>
+            Voltar
+        </a>
+
+        <section class="list-page" aria-labelledby="page-title">
+            <div class="page-heading">
+                <h1 id="page-title">Compras da semana</h1>
+            </div>
+
+            <form class="add-form" id="item-form">
+                <label class="sr-only" for="item-input">Nome do novo item</label>
+                <input type="text" id="item-input" placeholder="Adicione um novo item" autocomplete="off" required />
+                <button class="add-button" type="submit">Adicionar item</button>
+            </form>
+
+            <ul class="item-list" id="item-list" aria-label="Itens da lista">
+                <li class="list-item">
+                    <label class="item-label">
+                        <input type="checkbox" />
+                        <span>Pão de forma</span>
+                    </label>
+                    <button type="button" class="remove-button" aria-label="Remover Pão de forma" title="Remover item">&#128465;</button>
+                </li>
+                <li class="list-item">
+                    <label class="item-label">
+                        <input type="checkbox" />
+                        <span>Café preto</span>
+                    </label>
+                    <button type="button" class="remove-button" aria-label="Remover Café" title="Remover item">&#128465;</button>
+                </li>
+                <li class="list-item">
+                    <label class="item-label">
+                        <input type="checkbox" />
+                        <span>Suco de laranja</span>
+                    </label>
+                    <button type="button" class="remove-button" aria-label="Remover Leite" title="Remover item">&#128465;</button>
+                </li>
+                <li class="list-item">
+                    <label class="item-label">
+                        <input type="checkbox" />
+                        <span>Bolacha</span>
+                    </label>
+                    <button type="button" class="remove-button" aria-label="Remover Biscoito" title="Remover item">&#128465;</button>
+                </li>
+            </ul>
+
+            <div class="feedback" role="status">
+                <span class="feedback-icon" aria-hidden="true">!</span>
+                <span>O item foi removido da lista</span>
+                <button type="button" class="feedback-close" aria-label="Fechar aviso">&#215;</button>
+            </div>
+        </section>
+    </main>
+<script src="script.js"></script>
+</body>
+</html>
